@@ -1,9 +1,10 @@
   let array = [];
+  let backgroundColor = 200;
 
 
 function setup() {
-  createCanvas(600, 600);
-  background(255);
+  createCanvas(windowWidth, windowHeight);
+  background(backgroundColor);
 
   strokeWeight(10);
 
@@ -13,8 +14,9 @@ function setup() {
 function draw() {
 
   if (mouseIsPressed) {
-    //line(mouseX, mouseY, pmouseX, pmouseY);
-    background(0);
+    backgroundColor -= 3;
+    background(backgroundColor);
+    line(mouseX, mouseY, pmouseX, pmouseY);
     array.push([mouseX, mouseY]);
 
   }
